@@ -1,2 +1,2 @@
-# -JS-Basics-HomeTasks
+# -JS-Basics-HomeWork
 JS_Basics HomeTasks

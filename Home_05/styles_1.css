@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+}
+
+.chess_board {
+    display: flex;
+    flex-direction: column;  
+}
+
+.text {
+    color: red;
+    margin: 0;
+}
+.text_num {
+    
+    text-align: center;
+}
+.text_let {
+    margin-top: 20px;   
+}
+.line {
+    display: flex;
+}
+
+.white_block {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
+
+
+.black_block {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}

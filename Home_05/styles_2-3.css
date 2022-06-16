@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.basket {
+    background-color: aqua;
+    border: solid;
+    border-radius: 25%;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text {
+    margin: 0;
+    margin-top: 5px;
+    font-weight: 800;
+}
+
+.catalog {
+    width: 50vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+.catalog_element {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 150px;
+    height: 200px;
+    border: 1px solid gray;
+    border-radius: 10%;
+    justify-content: center;
+    align-items: center;   
+    
+}
+
+.catalog_element h4 {
+    font-size: 32px;
+    display: flex;
+}

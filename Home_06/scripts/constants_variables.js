@@ -2,7 +2,7 @@ let catalogData = `[
     {
         "type": "SmartPhone",
         "name": "IPhoneX",
-        "imagePath": "./images/IPhoneX.jpg",
+        "imagePath": "/images/IPhoneX.jpg",
         "price": "1899",
         "oldPrice": "2099",
         "isPopular": true,
@@ -11,7 +11,7 @@ let catalogData = `[
     {
         "type": "SmartPhone",
         "name": "IPhoneXX",
-        "imagePath": "./images/IPhoneX.jpg",
+        "imagePath": "/images/IPhoneX.jpg",
         "price": "1699",
         "oldPrice": "1999",
         "isPopular": true,
@@ -20,7 +20,7 @@ let catalogData = `[
     {
         "type": "SmartPhone",
         "name": "IPhoneXXX",
-        "imagePath": "./images/IPhoneX.jpg",
+        "imagePath": "/images/IPhoneX.jpg",
         "price": "2899",
         "oldPrice": "3499",
         "isPopular": false,
@@ -29,7 +29,7 @@ let catalogData = `[
     {
         "type": "SmartPhone",
         "name": "IPhoneXXXX",
-        "imagePath": "./images/IPhoneX.jpg",
+        "imagePath": "/images/IPhoneX.jpg",
         "price": "3699",
         "oldPrice": "3999",
         "isPopular": false,
@@ -38,7 +38,7 @@ let catalogData = `[
     {
         "type": "Computer",
         "name": "Mac",
-        "imagePath": "./images/monoblok_apple.png",
+        "imagePath": "/images/monoblok_apple.png",
         "price": "8799",
         "oldPrice": "9999",
         "isPopular": true,
@@ -47,7 +47,7 @@ let catalogData = `[
     {
         "type": "Computer",
         "name": "MaMac",
-        "imagePath": "./images/monoblok_apple.png",
+        "imagePath": "/images/monoblok_apple.png",
         "price": "12999",
         "oldPrice": "14999",
         "isPopular": true,
@@ -56,7 +56,8 @@ let catalogData = `[
 
 
 let catalog = [];
-let basketItems = [];
+
+let basketItems = localStorage.getItem('basketItems') == null ? [] : JSON.parse(localStorage.getItem('basketItems'));
 
 function sleep(milliseconds) {
     const date = Date.now();

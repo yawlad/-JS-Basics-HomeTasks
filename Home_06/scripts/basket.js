@@ -12,8 +12,30 @@ function basket() {
     const createBasket = () => {
         setBasketBottom();
         basketItems.forEach(basketItem => {
-            addToBasket(basketItem);
+            setBasketCard(basketItem);
         });
+        numberOfProduct.textContent = basketItems.length;
+        totalPrice.textContent = `${getTotalPrice()} BR`;
+    }
+
+    const setBasketCard = (product) => {
+        const productHtml = `
+        <div class="basket_card" id = ${product.id}>
+            <div class="basket_card_product">
+                <a href="" class="basket_card_image scale"><img src="${product.imagePath}" alt="" class="basket_card_image"></a>
+                <div class="info ">
+                    <a href="" class="basket_name">${product.name}</a>
+                    <div class="basket_price">${product.price} BR</div>
+                </div>
+        </div>
+            <button class="basket_remove_button">Убрать из корзины</button>
+        </div>
+        `;
+        document.querySelector('.basket_cards').insertAdjacentHTML('afterbegin',productHtml);
+        const removeFromBasketButton = document.querySelector('.basket_remove_button');
+        removeFromBasketButton.addEventListener('click', () => 
+            removeFromBasket(removeFromBasketButton.parentElement));
+        numberOfProduct.textContent = basketItems.length;
     }
 
     const setBasketBottom = () => {
@@ -36,25 +58,13 @@ function basket() {
     };
 
     const addToBasket = (product) => {
-        const productHtml = `
-        <div class="basket_card" id = ${product.id}>
-            <div class="basket_card_product">
-                <a href="" class="basket_card_image scale"><img src="${product.imagePath}" alt="" class="basket_card_image"></a>
-                <div class="info ">
-                    <a href="" class="basket_name">${product.name}</a>
-                    <div class="basket_price">${product.price} BR</div>
-                </div>
-        </div>
-            <button class="basket_remove_button">Убрать из корзины</button>
-        </div>
-        `;
-        document.querySelector('.basket_cards').insertAdjacentHTML('afterbegin',productHtml);
+        
         basketItems.push(product);
+        setBasketCard(product);
+
         setBasketBottom();
-        const removeFromBasketButton = document.querySelector('.basket_remove_button');
-        removeFromBasketButton.addEventListener('click', () => 
-            removeFromBasket(removeFromBasketButton.parentElement));
-        numberOfProduct.textContent = basketItems.length;
+        
+        localStorage.setItem('basketItems', JSON.stringify(basketItems));
         totalPrice.textContent = `${getTotalPrice()} BR`;
     }
 
@@ -62,6 +72,7 @@ function basket() {
         for (let i = 0; i < basketItems.length; i++) {
             if (element.id == basketItems[i].id) {
                 basketItems.splice(i, 1);
+                localStorage.setItem('basketItems', JSON.stringify(basketItems));
                 element.style.transition = "2s";
                 element.style.height = "0px";
                 element.style.minHeight = "0px";

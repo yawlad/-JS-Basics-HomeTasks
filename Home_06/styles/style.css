@@ -571,6 +571,7 @@ body {
   
 .basket_card_product {
     display: flex;  
+    transition: 1s;
 }
   
 .basket_card_image {

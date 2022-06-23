@@ -5,7 +5,7 @@ function basket() {
     const basketBottom = document.querySelector('.basket_bottom');
     const numberOfProduct = document.querySelector('.number_of_products');
     const totalPrice = document.querySelector('.total_price');
-
+    const basketImages = document.querySelector('.basket_images');
     let deleteBusketButton = document.querySelector('.delete_busket');
     
 
@@ -79,10 +79,39 @@ function basket() {
     const getTotalPrice = () => {
         return basketItems.reduce((acc, next) => acc + Number(next.price), 0); 
     }
+
+    const moveToBasket = (element) => {
+        let elementCopy = element.cloneNode(true);
+        elementCopy.style.transition = "1.5s";
+        elementCopy.style.position = 'fixed';
+        
+        elementCopy.style.zIndex = "3";
+        document.body.insertAdjacentElement('afterbegin',elementCopy);
+        
+        let coordsBegin = element.getBoundingClientRect();
+        let coordsEnd = basketImages.getBoundingClientRect();
+
+        elementCopy.style.top = `${coordsBegin.top-10}px`;
+        elementCopy.style.left = `${coordsBegin.left-10}px`;
+
+        setTimeout(() => { 
+            elementCopy.style.transform = `scale(0.01)`;
+            elementCopy.style.top = `${coordsEnd.top-90}px`;
+            elementCopy.style.left = `${coordsEnd.left-195}px`;
+            }, 100);
+        setTimeout(() => { 
+            elementCopy.remove();
+            }, 1500);
+             
+        }
+
+    
     
     addToBasketButtons.forEach(button => {
-        button.addEventListener('click', () => 
-        addToBasket(catalog[button.parentElement.parentElement.parentElement.getAttribute("id")]));
+        button.addEventListener('click', () => {
+        addToBasket(catalog[button.parentElement.parentElement.parentElement.getAttribute("id")]);
+        moveToBasket(button.parentElement.parentElement.parentElement);
+        });
     });
 
 

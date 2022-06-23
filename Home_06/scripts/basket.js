@@ -62,12 +62,12 @@ function basket() {
         for (let i = 0; i < basketItems.length; i++) {
             if (element.id == basketItems[i].id) {
                 basketItems.splice(i, 1);
-                
+                element.style.transition = "2s";
                 element.style.height = "0px";
                 element.style.minHeight = "0px";
                 element.style.padding = "0px";
                 element.style.overflow = "hidden";
-                setTimeout(() => element.remove(), 1000);
+                setTimeout(() => element.remove(), 2000);
                   
                 numberOfProduct.textContent = basketItems.length;
                 totalPrice.textContent = `${getTotalPrice()} BR`;

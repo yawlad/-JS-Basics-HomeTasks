@@ -15,7 +15,7 @@ function basket() {
             setBasketCard(basketItem);
         });
         numberOfProduct.textContent = basketItems.length;
-        totalPrice.textContent = `${getTotalPrice()} BR`;
+        totalPrice.textContent = `${getTotalPrice()} byn`;
     }
 
     const setBasketCard = (product) => {
@@ -25,7 +25,7 @@ function basket() {
                 <a href="" class="basket_card_image scale"><img src="${product.imagePath}" alt="" class="basket_card_image"></a>
                 <div class="info ">
                     <a href="" class="basket_name">${product.name}</a>
-                    <div class="basket_price">${product.price} BR</div>
+                    <div class="basket_price">${product.price} byn</div>
                 </div>
         </div>
             <button class="basket_remove_button">Убрать из корзины</button>

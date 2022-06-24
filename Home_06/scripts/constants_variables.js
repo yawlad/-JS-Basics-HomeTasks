@@ -6,7 +6,8 @@ let catalogData = `[
         "price": "1899",
         "oldPrice": "2099",
         "isPopular": true,
-        "isNew": false
+        "isNew": false,
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatem incidunt magni dolorum at doloremque earum temporibus est repudiandae quod?"
     },
     {
         "type": "SmartPhone",
@@ -15,7 +16,8 @@ let catalogData = `[
         "price": "1699",
         "oldPrice": "1999",
         "isPopular": true,
-        "isNew": false
+        "isNew": false,
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatem incidunt magni dolorum at doloremque earum temporibus est repudiandae quod?"
     },
     {
         "type": "SmartPhone",
@@ -24,7 +26,8 @@ let catalogData = `[
         "price": "2899",
         "oldPrice": "3499",
         "isPopular": false,
-        "isNew": true
+        "isNew": true,
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatem incidunt magni dolorum at doloremque earum temporibus est repudiandae quod?"
     },
     {
         "type": "SmartPhone",
@@ -33,7 +36,8 @@ let catalogData = `[
         "price": "3699",
         "oldPrice": "3999",
         "isPopular": false,
-        "isNew": true
+        "isNew": true,
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatem incidunt magni dolorum at doloremque earum temporibus est repudiandae quod?"
     },
     {
         "type": "Computer",
@@ -42,7 +46,8 @@ let catalogData = `[
         "price": "8799",
         "oldPrice": "9999",
         "isPopular": true,
-        "isNew": false
+        "isNew": false,
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatem incidunt magni dolorum at doloremque earum temporibus est repudiandae quod?"
     },
     {
         "type": "Computer",
@@ -51,7 +56,8 @@ let catalogData = `[
         "price": "12999",
         "oldPrice": "14999",
         "isPopular": true,
-        "isNew": true
+        "isNew": true,
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatem incidunt magni dolorum at doloremque earum temporibus est repudiandae quod?"
     },
     {
         "type": "Computer",
@@ -60,7 +66,8 @@ let catalogData = `[
         "price": "15499",
         "oldPrice": "18999",
         "isPopular": false,
-        "isNew": false
+        "isNew": false,
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatem incidunt magni dolorum at doloremque earum temporibus est repudiandae quod?"
     },
     {
         "type": "Note",
@@ -69,7 +76,8 @@ let catalogData = `[
         "price": "2499",
         "oldPrice": "2999",
         "isPopular": false,
-        "isNew": false
+        "isNew": false,
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatem incidunt magni dolorum at doloremque earum temporibus est repudiandae quod?"
     },
     {
         "type": "Note",
@@ -78,7 +86,8 @@ let catalogData = `[
         "price": "1499",
         "oldPrice": "1999",
         "isPopular": false,
-        "isNew": false
+        "isNew": false,
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatem incidunt magni dolorum at doloremque earum temporibus est repudiandae quod?"
     },
     {
         "type": "Notebook",
@@ -87,7 +96,8 @@ let catalogData = `[
         "price": "3999",
         "oldPrice": "4999",
         "isPopular": false,
-        "isNew": false
+        "isNew": false,
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatem incidunt magni dolorum at doloremque earum temporibus est repudiandae quod?"
     },
     {
         "type": "Notebook",
@@ -96,7 +106,8 @@ let catalogData = `[
         "price": "5499",
         "oldPrice": "6599",
         "isPopular": false,
-        "isNew": false
+        "isNew": false,
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatem incidunt magni dolorum at doloremque earum temporibus est repudiandae quod?"
     },
     {
         "type": "Notebook",
@@ -105,7 +116,8 @@ let catalogData = `[
         "price": "7499",
         "oldPrice": "8999",
         "isPopular": true,
-        "isNew": false
+        "isNew": false,
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatem incidunt magni dolorum at doloremque earum temporibus est repudiandae quod?"
     }]`;
 
 

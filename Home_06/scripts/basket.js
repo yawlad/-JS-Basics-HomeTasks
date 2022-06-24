@@ -1,6 +1,6 @@
 
 
-function basket() {
+    
     const addToBasketButtons = document.querySelectorAll('.to_basket');
     const basketBottom = document.querySelector('.basket_bottom');
     const numberOfProduct = document.querySelector('.number_of_products');
@@ -27,14 +27,16 @@ function basket() {
                     <a href="" class="basket_name">${product.name}</a>
                     <div class="basket_price">${product.price} byn</div>
                 </div>
-        </div>
+            </div>
             <button class="basket_remove_button">Убрать из корзины</button>
         </div>
         `;
         document.querySelector('.basket_cards').insertAdjacentHTML('afterbegin',productHtml);
         const removeFromBasketButton = document.querySelector('.basket_remove_button');
-        removeFromBasketButton.addEventListener('click', () => 
-            removeFromBasket(removeFromBasketButton.parentElement));
+        removeFromBasketButton.addEventListener('click', () => {  
+            removeFromOrder(searchOrderCardById(removeFromBasketButton.parentElement.id));  
+            removeFromBasket(removeFromBasketButton.parentElement);
+        });
         numberOfProduct.textContent = basketItems.length;
     }
 
@@ -42,13 +44,15 @@ function basket() {
         if (basketItems.length != 0) {
             const innerBasketBottom = `
             <button class="delete_busket">Очистить<br>корзину</button>
-            <button class="make_order">Оформить<br>заказ</button>
+            <a href="/pages/order.html"><button class="make_order">Оформить<br>заказ</button></a>
             `;
             basketBottom.innerHTML = innerBasketBottom;  
             deleteBusketButton = document.querySelector('.delete_busket'); 
             deleteBusketButton.addEventListener('click', () => {
                 document.querySelectorAll('.basket_card').forEach(card => {
+                    removeFromOrder(searchOrderCardById(card.id));  
                     removeFromBasket(card);
+                    
                 });
             });
         } else {
@@ -65,11 +69,12 @@ function basket() {
         setBasketBottom();
         
         localStorage.setItem('basketItems', JSON.stringify(basketItems));
-        totalPrice.textContent = `${getTotalPrice()} BR`;
+        totalPrice.textContent = `${getTotalPrice()} byn`;
     }
 
     const removeFromBasket = (element) => {
         for (let i = 0; i < basketItems.length; i++) {
+
             if (element.id == basketItems[i].id) {
                 basketItems.splice(i, 1);
                 localStorage.setItem('basketItems', JSON.stringify(basketItems));
@@ -81,11 +86,21 @@ function basket() {
                 setTimeout(() => element.remove(), 2000);
                   
                 numberOfProduct.textContent = basketItems.length;
-                totalPrice.textContent = `${getTotalPrice()} BR`;
+                totalPrice.textContent = `${getTotalPrice()} byn`;
                 return;
             }
         }
     }
+
+    const searchBasketCardById = (id) => {
+        const basketCards = document.querySelectorAll('.basket_card');
+        for (let i = 0; i < basketItems.length; i++) {
+            if (basketCards[i].id == id) {
+                
+                return basketCards[i];
+            }
+        }
+    };
 
     const getTotalPrice = () => {
         return basketItems.reduce((acc, next) => acc + Number(next.price), 0); 
@@ -129,6 +144,3 @@ function basket() {
 
     createBasket();
     
-};
-
-basket();

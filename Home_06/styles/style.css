@@ -730,3 +730,199 @@ body {
 .main_catalog .product_card {
     width: 350px;
 }
+
+
+/*//////////////////////////////////////////*/
+
+.order_cards {
+    padding: 30px;
+    margin: 20px;
+    border-bottom: 3px solid #b5b8bb;
+    transition: 1s;
+    min-height: 400px;
+}
+
+.order_cards .product_card {
+    width: auto;
+    padding: 30px;
+    display: flex;
+    transition: 1s;
+    min-height: 400px;
+}
+
+.order_cards .card_img {
+    width: auto;
+    height: auto;
+    min-width: 320px;
+    min-height: 380px;
+}
+
+.order_cards .product_card_text_content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.order_cards .card_head {
+    align-self: center;
+    font-size: 48px;
+    transition: 1s;
+    margin: 24px;
+}
+
+.order_cards .description {
+    font-size: 24px;
+    line-height: 48px;
+}
+
+.order_cards .product_card_without_buttons {
+    display: flex;
+}
+
+.order_cards .buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.order_cards .basket_remove_button {
+    padding: 20px;
+    margin: auto;
+    font-size: 32px;
+}
+
+.order_cards .basket_remove_button:hover {
+    transform: scale(1.2);
+}
+
+.order_cards .card_price {
+    font-size: 32px;
+}
+
+
+/*//////////////////////////////////////////*/
+
+.order_cards {
+    padding: 30px;
+    margin: 20px;
+    border-bottom: 3px solid #b5b8bb;
+}
+
+.info_cards .product_card {
+    width: auto;
+    padding: 30px;
+    display: flex;
+}
+
+.info_cards .card_img {
+    width: auto;
+    height: auto;
+    min-width: 320px;
+    min-height: 380px;
+}
+
+.info_cards .product_card_text_content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info_cards .card_head {
+    align-self: center;
+    font-size: 48px;
+    transition: 1s;
+    margin: 24px;
+}
+
+.info_cards .description {
+    font-size: 24px;
+    line-height: 48px;
+}
+
+.info_cards .product_card_without_buttons {
+    display: flex;
+}
+
+.info_cards .buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.info_cards .basket_remove_button {
+    padding: 20px;
+    font-size: 32px;
+}
+
+.info_cards .basket_remove_button:hover {
+    transform: scale(1.2);
+}
+
+.info_cards .card_price {
+    font-size: 32px;
+}
+
+/*//////////////////////////////////////////*/
+
+.order_form {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form_section {
+    display: flex;
+    flex-direction: column;
+    
+    width: 30%;
+}
+
+.order_form_element {
+    border: 1px solid #b5b8bb;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.additional_info {
+    max-width: 288px;
+    max-height: 200px;
+    resize: none;
+}
+
+.form_results {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    justify-content: space-evenly;
+}
+
+.result_products_num, .result_price {
+    text-align: center;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.confirm_form {
+    margin: 0 auto 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.confirm_form:hover {
+    transform: scale(1.2);
+}

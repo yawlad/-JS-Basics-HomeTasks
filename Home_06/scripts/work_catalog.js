@@ -21,7 +21,7 @@
             card.remove();
         }); 
         setCatalog(catalog);
-        basket();
+        createBasket();
     }
 
     catalogCategories.forEach(categoryButton => {

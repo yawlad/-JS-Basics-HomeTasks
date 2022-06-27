@@ -804,64 +804,71 @@ body {
 
 /*//////////////////////////////////////////*/
 
-.order_cards {
+.info_product_cards {
     padding: 30px;
     margin: 20px;
     border-bottom: 3px solid #b5b8bb;
+    transition: 1s;
+    min-height: 400px;
 }
 
-.info_cards .product_card {
+.info_product_cards .product_card {
     width: auto;
     padding: 30px;
     display: flex;
+    transition: 1s;
+    min-height: 400px;
 }
 
-.info_cards .card_img {
+.info_product_cards .card_img {
     width: auto;
     height: auto;
     min-width: 320px;
     min-height: 380px;
 }
 
-.info_cards .product_card_text_content {
+.info_product_cards .product_card_text_content {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.info_cards .card_head {
+.info_product_cards .card_head {
     align-self: center;
     font-size: 48px;
     transition: 1s;
     margin: 24px;
 }
 
-.info_cards .description {
+.info_product_cards .description {
     font-size: 24px;
     line-height: 48px;
 }
 
-.info_cards .product_card_without_buttons {
+.info_product_cards .product_card_without_buttons {
     display: flex;
 }
 
-.info_cards .buttons{
+.info_product_cards .buttons{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    
 }
 
-.info_cards .basket_remove_button {
+.info_product_cards .to_basket {
     padding: 20px;
+    margin: auto;
     font-size: 32px;
+    
 }
 
-.info_cards .basket_remove_button:hover {
+.info_product_cards .to_basket:hover {
     transform: scale(1.2);
 }
 
-.info_cards .card_price {
+.info_product_cards .card_price {
     font-size: 32px;
 }
 
@@ -925,4 +932,64 @@ body {
 
 .confirm_form:hover {
     transform: scale(1.2);
+}
+
+/*//////////////////////////////////////////*/
+
+.info_cards_head {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 100px;
+    
+}
+
+.info_cards {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 20px;
+    border-bottom: 3px solid #b5b8bb;
+    transition: 1s;
+    min-height: 400px;
+}
+
+.info_card {
+    width: auto;
+    padding: 30px;
+    
+    
+    transition: 1s;
+    min-height: 400px;
+    background: linear-gradient(to bottom, #b5b8bb, white);
+    border-radius: 40px;
+    margin-bottom: 150px;
+    box-shadow: 0 0px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+}
+
+.info_card_head {
+
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: black;
+    margin: 0px auto 20px;
+}
+
+.info_card_content {
+
+}
+
+.info_item {
+    color: rgb(66, 65, 65);
+    font-size: 26px;
+    line-height: 30px;
+}
+
+.map {
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 0px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
 }

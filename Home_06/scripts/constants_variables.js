@@ -136,15 +136,23 @@ function sleep(milliseconds) {
   const createCardElement = (product) => {
     const card_img = document.createElement('img');
     card_img.classList.add('card_img');
-    card_img.src = `${product.imagePath}`;
+    card_img.src = `..${product.imagePath}`;
+    
 
     const product_link_img = document.createElement('a');
     product_link_img.classList.add('product_link_img', 'text');
     product_link_img.insertAdjacentElement('beforeend',card_img);
+    product_link_img.href = `../pages/product.html`;
+    product_link_img.addEventListener('click', () => {
+        localStorage.setItem('product_info', JSON.stringify(product));
+    })
 
     const card_head = document.createElement('span');
     card_head.classList.add('card_head');
     card_head.textContent = `${product.name}`;
+    card_head.addEventListener('click', () => {
+        localStorage.setItem('product_info', JSON.stringify(product));
+    })
 
     const product_link = document.createElement('a');
     product_link.classList.add('product_link', 'text');
@@ -172,6 +180,12 @@ function sleep(milliseconds) {
     const make_order = document.createElement('button');
     make_order.classList.add('make_order', 'card_button', 'text');
     make_order.textContent = `Быстрый заказ`;
+    make_order.addEventListener('click', () => {
+        basketItems = [];
+        basketItems.push(product);
+        localStorage.setItem('basketItems', JSON.stringify(basketItems));
+        window.location.href = '../pages/order.html';
+    })
 
     const buttons = document.createElement('div');
     buttons.classList.add('buttons');

@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 5%;
+    box-sizing: border-box;
+    background-color: rgb(180, 181, 182);
+}
+
+.hometask {
+    display: flex;
+    padding: 50px;
+    background-color: rgb(214, 214, 214);
+    min-width: 100vh;
+    min-height: 100%;
+    box-sizing: border-box;
+    border-radius: 50px;
+}
+
+.task {
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    flex-grow: 1;
+    margin: 20px;
+}
+
+.text {
+    font-size: 32px;
+    margin: 25px;
+}

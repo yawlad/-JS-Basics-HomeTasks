@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="hometask">
+        <div class="task_1 task">
+            <div class="text">При реализации корзины, каталогов, чтобы не выносить каталог и саму корзину в отдельные сущности, а реализовать их внутри функции (замыкание).</div>
+        </div>
+        <div class="task_2 task">
+            <div class="text">1) Undefined, т.к. изначально мы проходим в тело тернарного оператора, создаем там локальную переменную, однако при выходе из него в силу особенностей оператора var имя переменной сохраняется, однако значение не сохраняется</div>
+            <div class="text">2) Будет ошибка, т.к. вложенная функция a не находится в глобальной области видимости и вообще не была определена без вызова b</div>
+            <div class="text">3) Выведется функция, т.к. мы не переопределяли переменную с именем a</div>
+            <div class="text">4) Выведется число 10, т.к. внутри функции мы обратились к 3 передаваемому аргументу и перезаписали его на число 10</div>
+            <div class="text">5) Выводится объект Window, затрудняюсь ответить, почему именно</div>
+        </div>
+</body>
+</html>

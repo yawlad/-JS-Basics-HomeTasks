@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <nav class="nav_bar">
+                <a href="./index.html">
+                    <div class="logo_div">
+                        <img src="../images/logo_black.svg" alt="Logo" class="logo">
+                    </div>
+                </a>
+                <ul class="nav_list">
+                    <a class="nav_element text" href="../pages/info.html#payment">Оплата</a>
+                    <a class="nav_element text" href="../pages/info.html#delivery">Доставка</a>
+                    <a class="nav_element text" href="../pages/info.html#contacts">Контакты</a>
+                    <a class="nav_element text" href="../pages/catalog.html">Каталог</a>
+                    <span class="nav_element text">+375 29 228 32 22</span>
+                </ul>
+                <div class="basket">
+                    <div class="basket_images">
+                        <img src="../images/shopping-basket-button.svg" alt="basket" class="basket_image">
+                        <div class="basket_arrow"><span class="number_of_products text">0</span></div>
+                    </div>
+                    <div class="basket_all_cards">
+                        <div class="basket_cards">
+
+                        </div>
+                        <div class="total_price">
+                            0 byn
+                        </div>
+                        <div class="basket_bottom">
+
+                        </div>          
+                    </div>
+                </div>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="wrapper">
+            <div class="order_cards">
+                
+            </div>
+            <div>   
+                <form action="" class="order_form">
+                    <div class="form_section">
+                        <input type="text" class="name order_form_element text" placeholder="ФИО">
+                        <input type="tel" class="phone order_form_element text" placeholder="Номер телефона">
+                        <input type="email" class="email order_form_element text" placeholder="EMail">
+                        <input type="text" class="adress order_form_element text" placeholder="Адрес">
+                        
+                    </div>
+                    <div class="form_section">
+                        <div class="pay_method text">
+                            <input type="radio" class="order_form_element text" name="radio"> Наличными
+                            <input type="radio" class="order_form_element text" name="radio"> Картой
+                        </div>
+                        <textarea name="" id="" cols="30" rows="10" class="additional_info order_form_element text" placeholder="Пожелания к заказу"></textarea>
+                    </div>
+                    <div class="form_section">
+                        <div class="form_results text">
+                            <div class="result_products_num ">
+                                Всего товаров: 0
+                            </div>
+                            <div class="result_price">
+                                Заказ на сумму: 110&nbsp;byn
+                            </div>
+                            <input type="submit" value="Подтвердить заказ" class="confirm_form text">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer_top">
+                <div class="company_info">
+                    <div class="logo_and_name">
+                        <img src="../images/logo_white.svg" alt="logo" class="logo">
+                        <div class="footer_company_name text">CompanyName</div>
+                    </div>
+                    <div class="footer_company_desc text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime accusamus rerum fugiat inventore tempora quasi dignissimos nulla facilis iusto, excepturi odio earum eum perferendis laborum asperiores esse natus maiores mollitia!</div>
+                </div>
+                <div class="other_info_wrapper">
+                    <div class="other_info">
+                        
+                    <div class="links">
+                        <div class="links_head text">Основные ссылки</div>
+                        <ul class="links_list text">
+                            <li><a href="../pages/info.html#payment" class="links_element">Оплата</a></li>
+                            <li><a href="../pages/info.html#delivery" class="links_element">Доставка</a></li>
+                            <li><a href="../pages/info.html#contacts" class="links_element">Контакты</a></li>
+                            <li><a href="../pages/catalog.html" class="links_element">Каталог</a></li>
+                        </ul>
+                    </div>
+                    <div class="phones">
+                        <div class="phones_head text">Телефон</div>
+                        <ul class="phones_list text">
+                            <li class="phones_element">+375 29 999 88 77</li>
+                            <li class="phones_element">+375 33 999 88 77</li>
+                            <li class="phones_element">+375 23 999 88 77</li>
+                        </ul>
+                    </div>
+                    <div class="socials">
+                        <div class="socials_head text">Соц-сети</div>
+                        <ul class="socials_list text">
+                            <li><img src="../images/vk_white.svg" alt="vk" class="socials_img"><a href="" class="socials_element">VK.com</a></li>
+                            <li><img src="../images/facebook_white.svg" alt="facebook" class="socials_img"><a href="" class="socials_element">FaceBook</a></li>
+                            <li><img src="../images/instagram_white.svg" alt="instagram" class="socials_img"><a href="" class="socials_element">Instagram</a></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <p class="copyright text">Copyright © 2019. Все права защищены</p>
+                <p ><a href="" class="privacy text">Политика приватности</a></p>
+            </div>
+            
+        </div>
+    </footer>
+    <script src="../scripts/constants_variables.js"></script>
+    <script src="../scripts/make_catalog.js"></script>
+    <script src="../scripts/basket.js"></script>
+    <script src="../scripts/order.js"></script>
+</body>
+
+</html>
